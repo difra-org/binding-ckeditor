@@ -1,0 +1,15 @@
+/* Fix for CKEditor's area to let it use /css/main.css */
+html,
+body {
+	width: auto;
+	height: auto;
+	min-width: 0;
+	max-width: none;
+	min-height: 0;
+	max-height: none;
+	position: static !important;
+}
+
+body {
+	margin: 8px;
+}

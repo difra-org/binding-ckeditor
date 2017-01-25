@@ -1,0 +1,6 @@
+<locale>
+	<editor>
+		<upload-error>При загрузке файла произошла ошибка.</upload-error>
+		<upload-notimage>Не удалось распознать формат изображения.</upload-notimage>
+	</editor>
+</locale>

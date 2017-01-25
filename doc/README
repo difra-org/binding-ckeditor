@@ -1,0 +1,14 @@
+Editor plugin for Difra framework
+
+This plugin brings CKEditor WYSIWYG editor.
+
+Usage:
+
+<textarea name="example" editor="Medium" bodyClass="editor-body-class"/>
+
+Attributes:
+editor		Toolbar version (Minimal, Medium, Full, Default ...)
+bodyClass	Class to apply to body element inside editor. Optional.
+
+
+Visit http://difra.org/ for more info.

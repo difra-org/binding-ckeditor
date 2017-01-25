@@ -1,0 +1,23 @@
+{
+    "name": "difra/editor",
+    "description": "Capcha plugin for Difra framework",
+    "type": "library",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Eduard Kutuev",
+            "email": "nap@napych.com"
+        }
+    ],
+    "require": {
+        "difra/difra": "7.0.x-dev"
+    },
+    "autoload": {
+        "files": [
+            "main.php"
+        ],
+        "psr-4": {
+            "Difra\\Editor\\": "src"
+        }
+    }
+}
