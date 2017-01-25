@@ -1,6 +1,6 @@
 {
     "name": "difra/editor",
-    "description": "Capcha plugin for Difra framework",
+    "description": "Editor plugin for Difra framework",
     "type": "library",
     "license": "BSD-2-Clause",
     "authors": [
