@@ -22,14 +22,14 @@ editor.config = {
         }
     },
 
-    toolbar: 'Default',
+    toolbar: 'Medium',
     toolbar_Default: [
         ['Source'],
         ['Maximize', 'ShowBlocks'],
         ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
         ['Undo', 'Redo', '-', 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat'],
         ['Link', 'Unlink'],
-        ['Image', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar'],
+        ['Image', 'Table', 'HorizontalRule', 'SpecialChar'],
         '/',
         ['Bold', 'Italic', 'Underline', 'Strike'],
         ['Format', 'Font', 'FontSize'],
@@ -48,7 +48,7 @@ editor.config = {
         {name: 'clipboard', items: ['PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
         {name: 'paragraph', items: ['NumberedList', 'BulletedList']},
         {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
-        {name: 'insert', items: ['Image', /*'Flash',*/ 'Table', 'HorizontalRule', 'SpecialChar']}
+        {name: 'insert', items: ['Image', 'Table', 'HorizontalRule', 'SpecialChar']}
     ],
 
     toolbar_Full: [
@@ -60,7 +60,7 @@ editor.config = {
         {name: 'clipboard', items: ['PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
         {name: 'paragraph', items: ['NumberedList', 'BulletedList']},
         {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
-        {name: 'insert', items: ['Image', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar']},
+        {name: 'insert', items: ['Image', 'Table', 'HorizontalRule', 'SpecialChar']},
         {name: 'tools', items: ['Maximize', 'ShowBlocks', 'Source']}
     ],
 
@@ -124,10 +124,16 @@ editor.init = function () {
 editor.inject = function () {
 
     $('textarea').each(function () {
-        if ($(this).attr('editor')) {
+        if ($(this).attr('editor') || $(this).hasClass('editor')) {
             editor.init();
-            editor.config.bodyClass = $(this).attr('bodyClass');
-            editor.config.toolbar = $(this).attr('editor');
+            // backwards compatibility
+            if ($(this).attr('bodyClass')) {
+                editor.config.bodyClass = $(this).attr('bodyClass');
+            }
+            if ($(this).attr('editor')) {
+                editor.config.toolbar = $(this).attr('editor');
+            }
+            // /backwards compatibility
 
             if ($(this).attr('fileupload')) {
                 editor.config['filebrowserUploadUrl'] = '/uploadimage/';
