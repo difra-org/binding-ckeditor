@@ -1,3 +1,7 @@
+1.0.2 (in development)
+ * Updated CKeditor
+ + Editor now triggers on "editor" class
+
 1.0.1
  * Nginx config path fix
 
