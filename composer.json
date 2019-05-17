@@ -10,7 +10,7 @@
         }
     ],
     "dist": {
-        "url": "https://www.difra.org/download/difra-editor-1.0.1.zip",
+        "url": "https://github.com/difra-org/editor/archive/1.0.1.zip",
         "type": "zip"
     },
     "require": {
