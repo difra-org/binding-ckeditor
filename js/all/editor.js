@@ -16,6 +16,7 @@ editor.config = {
     disableNativeSpellChecker: false,
     disableReadonlyStyling: true,
     extraAllowedContent: {
+        'mark': {},
         '*': {
             classes: '*',
             attributes: 'id'
