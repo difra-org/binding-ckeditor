@@ -1,6 +1,6 @@
 1.0.2 (in development)
  * Updated CKeditor
- + Editor now triggers on "editor" class
+ + Editor now triggers on "data-editor" attribute
 
 1.0.1
  * Nginx config path fix

@@ -124,21 +124,18 @@ editor.init = function () {
 editor.inject = function () {
 
     $('textarea').each(function () {
-        if ($(this).attr('editor') || $(this).hasClass('editor')) {
+        const $this = $(this);
+        if ($this.attr('data-editor')) {
             editor.init();
-            // backwards compatibility
-            if ($(this).attr('bodyClass')) {
-                editor.config.bodyClass = $(this).attr('bodyClass');
+            if ($this.attr('data-editor-class')) {
+                editor.config.bodyClass = $this.attr('data-editor-class');
             }
-            if ($(this).attr('editor')) {
-                editor.config.toolbar = $(this).attr('editor');
-            }
-            // /backwards compatibility
-
-            if ($(this).attr('fileupload')) {
+            editor.config.toolbar = $this.attr('data-editor');
+            if ($this.attr('data-editor-upload')) {
+                editor.config['filebrowserUploadUrl'] = $this.attr('data-editor-upload');
+            } else {
                 editor.config['filebrowserUploadUrl'] = '/uploadimage/';
             }
-
             CKEDITOR.replace(this, editor.config);
         }
     });
@@ -171,9 +168,9 @@ editor.flush = function () {
 
 $(document).ready(editor.inject);
 
-// поддержка switcher
+// Switcher support
 $(document).on('construct', editor.inject);
 $(document).on('destruct', editor.clean);
 
-// поддержка ajaxer
+// Ajaxer support
 $(document).on('form-submit', editor.flush);
