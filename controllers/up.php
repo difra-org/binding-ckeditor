@@ -1,11 +1,14 @@
 <?php
+
+namespace Controller;
+
 use Difra\Libs\Images;
 
 /**
  * Class UpController
  * Provides temporary storage mechanics for images
  */
-class UpController extends \Difra\Controller
+class Up extends \Difra\Controller
 {
     /**
      * Upload image
