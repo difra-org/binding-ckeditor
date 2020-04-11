@@ -13,6 +13,12 @@
         "url": "https://github.com/difra-org/editor/archive/1.0.1.zip",
         "type": "zip"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:difra-org/editor.git"
+        }
+    ],
     "require": {
         "difra/difra": "~7.0.0"
     },
