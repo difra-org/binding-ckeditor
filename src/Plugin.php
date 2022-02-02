@@ -1,6 +1,8 @@
 <?php
 
-namespace Difra\Editor;
+declare(strict_types=1);
+
+namespace Difra\CKEditor;
 
 /**
  * Class Plugin
@@ -11,7 +13,7 @@ class Plugin extends \Difra\Plugin
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
     }
 }

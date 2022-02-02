@@ -1,3 +1,3 @@
 <?php
 
-\Difra\Editor\Plugin::enable();
+\Difra\CKEditor\Plugin::enable();

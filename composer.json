@@ -10,7 +10,7 @@
         }
     ],
     "dist": {
-        "url": "https://github.com/difra-org/binding-ckeditor/archive/refs/tags/8.0.0.zip",
+        "url": "https://github.com/difra-org/binding-ckeditor/archive/refs/tags/8.0.1.zip",
         "type": "zip"
     },
     "repositories": [
@@ -27,7 +27,7 @@
             "main.php"
         ],
         "psr-4": {
-            "Difra\\Editor\\": "src"
+            "Difra\\CKEditor\\": "src"
         }
     }
 }

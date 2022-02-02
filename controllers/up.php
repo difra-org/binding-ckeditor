@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Controller;
 
 use Difra\Libs\Images;
@@ -44,8 +46,8 @@ class Up extends \Difra\Controller
 
     /**
      * View image
-     * @param Difra\Param\AnyInt $id
-     * @throws Difra\View\HttpError
+     * @param \Difra\Param\AnyInt $id
+     * @throws \Difra\View\HttpError|\Difra\Exception
      */
     public function tmpAction(\Difra\Param\AnyInt $id)
     {
